@@ -13,6 +13,8 @@
 		26AE94AE23B4DDA7004A19AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26AE94AC23B4DDA7004A19AD /* Main.storyboard */; };
 		26AE94B023B4DDA9004A19AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26AE94AF23B4DDA9004A19AD /* Assets.xcassets */; };
 		26AE94B323B4DDA9004A19AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26AE94B123B4DDA9004A19AD /* LaunchScreen.storyboard */; };
+		26AE94BC23B50335004A19AD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AE94BA23B50335004A19AD /* TableViewCell.swift */; };
+		26AE94BD23B50335004A19AD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26AE94BB23B50335004A19AD /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		26AE94AF23B4DDA9004A19AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26AE94B223B4DDA9004A19AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26AE94B423B4DDA9004A19AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26AE94BA23B50335004A19AD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		26AE94BB23B50335004A19AD /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				26AE94AF23B4DDA9004A19AD /* Assets.xcassets */,
 				26AE94B123B4DDA9004A19AD /* LaunchScreen.storyboard */,
 				26AE94B423B4DDA9004A19AD /* Info.plist */,
+				26AE94BA23B50335004A19AD /* TableViewCell.swift */,
+				26AE94BB23B50335004A19AD /* TableViewCell.xib */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26AE94B323B4DDA9004A19AD /* LaunchScreen.storyboard in Resources */,
+				26AE94BD23B50335004A19AD /* TableViewCell.xib in Resources */,
 				26AE94B023B4DDA9004A19AD /* Assets.xcassets in Resources */,
 				26AE94AE23B4DDA7004A19AD /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26AE94AB23B4DDA7004A19AD /* ViewController.swift in Sources */,
+				26AE94BC23B50335004A19AD /* TableViewCell.swift in Sources */,
 				26AE94A723B4DDA7004A19AD /* AppDelegate.swift in Sources */,
 				26AE94A923B4DDA7004A19AD /* SceneDelegate.swift in Sources */,
 			);
@@ -285,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ChatRoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ChatRoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
