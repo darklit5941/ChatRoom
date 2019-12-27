@@ -25,8 +25,9 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.nameLabel.text = "1"
-        //cell.avatarUIImageView.image = UIImage(named: <#T##String#>)
+        cell.nameLabel.text = "朱俊蓉"
+        cell.statusLabel.text = "我有一隻小毛驢我從來也不ㄎ騎, 有一天我心血來潮騎著去趕集, 我手裡拿著小皮鞭嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿嘿"
+        cell.DateLabel.text = "12/20"
         return cell
     }
     
