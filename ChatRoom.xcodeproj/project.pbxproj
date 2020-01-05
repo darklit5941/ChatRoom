@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265681CF23C2360900DA5FC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265681CE23C2360900DA5FC2 /* HomeViewController.swift */; };
 		26AE94A723B4DDA7004A19AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AE94A623B4DDA7004A19AD /* AppDelegate.swift */; };
 		26AE94A923B4DDA7004A19AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AE94A823B4DDA7004A19AD /* SceneDelegate.swift */; };
 		26AE94AB23B4DDA7004A19AD /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AE94AA23B4DDA7004A19AD /* MessageListViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265681CE23C2360900DA5FC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		26AE94A323B4DDA7004A19AD /* ChatRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AE94A623B4DDA7004A19AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26AE94A823B4DDA7004A19AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				26AE94B423B4DDA9004A19AD /* Info.plist */,
 				26AE94BA23B50335004A19AD /* MessageListTableViewCell.swift */,
 				26AE94BB23B50335004A19AD /* MessageListTableViewCell.xib */,
+				265681CE23C2360900DA5FC2 /* HomeViewController.swift */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265681CF23C2360900DA5FC2 /* HomeViewController.swift in Sources */,
 				26AE94AB23B4DDA7004A19AD /* MessageListViewController.swift in Sources */,
 				26AE94BC23B50335004A19AD /* MessageListTableViewCell.swift in Sources */,
 				26AE94A723B4DDA7004A19AD /* AppDelegate.swift in Sources */,
