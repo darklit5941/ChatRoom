@@ -31,12 +31,12 @@ var Chats = [
     Chat(chat_id: 12, name: "摩羯座", picture: "capricorn", last_message: "好的 沒關係 我接受", last_message_time: "05/19")
 ]
 
-class ViewController: UIViewController {
+class MessageListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        let nib = UINib(nibName: "MessageListTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,9 +45,9 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource{
+extension MessageListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessageListTableViewCell
         let data = Chats[indexPath.row]
         cell.avatarUIImageView.image = UIImage(named: data.picture)
         cell.nameLabel.text = data.name
