@@ -20,7 +20,7 @@ var chats = [
     chat(chat_id: 1, name: "水瓶座", picture: "aquarius", last_message: "今天不打射手了", last_message_time: "12/01"),
     chat(chat_id: 2, name: "雙魚座", picture: "pisces", last_message: "ㄎㄎ我要喝水", last_message_time: "01/23"),
     chat(chat_id: 3, name: "牡羊座", picture: "aries", last_message: "不想上班", last_message_time: "03/11"),
-    chat(chat_id: 4, name: "金牛做", picture: "taurus", last_message: "我絕對不是小氣, 我只是有原則", last_message_time: "昨天"),
+    chat(chat_id: 4, name: "金牛座", picture: "taurus", last_message: "我絕對不是小氣, 我只是有原則", last_message_time: "昨天"),
     chat(chat_id: 5, name: "雙子座", picture: "gemini", last_message: "你真的認識我嗎", last_message_time: "11/02"),
     chat(chat_id: 6, name: "巨蟹座", picture: "cancer", last_message: "我要回家了 掰掰", last_message_time: "去年"),
     chat(chat_id: 7, name: "獅子座", picture: "leo", last_message: "是在哈囉?", last_message_time: "前年"),

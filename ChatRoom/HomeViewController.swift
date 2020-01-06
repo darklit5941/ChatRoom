@@ -23,7 +23,11 @@ struct homeList {
 
 var homeLists =
     homeList(frends: [
-        frend(frend_id: 1, name: "獅子座", nick_name: "獅獅", picture: "leo", description: "森林之王")
+        frend(frend_id: 1, name: "獅子座", nick_name: "獅獅", picture: "leo", description: "森林之王"),
+        frend(frend_id: 2, name: "雙魚座", nick_name: "魚魚", picture: "pisces", description: "我要有水才能活"),
+        frend(frend_id: 3, name: "金牛座", nick_name: "牛牛", picture: "taurus", description: "很快就長大了"),
+        frend(frend_id: 4, name: "摩羯座", nick_name: "饃饃", picture: "capricorn", description: "不知道要打什麼了"),
+        frend(frend_id: 5, name: "射手座", nick_name: "射手", picture: "sagittarius", description: "射到就知道")
     ], chats: [
         chat(chat_id: 1, name: "風象星座討論", picture: "", last_message: "是不是都很瘋?", last_message_time: "12/04")
     ])
