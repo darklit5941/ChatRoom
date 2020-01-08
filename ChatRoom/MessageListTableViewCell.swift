@@ -11,8 +11,9 @@ import UIKit
 class MessageListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var avatarUIImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

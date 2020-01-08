@@ -31,14 +31,16 @@ struct homeList {
 }
 
 var homeLists =
-    homeList(myinfo: me(id: 1, name: "水瓶座", nick_name: "水水", picture: "aquarius", description: "水瓶的脾氣都很古怪"),
+    homeList(
+    myinfo: me(id: 1, name: "水瓶座", nick_name: "水水", picture: "aquarius", description: "水瓶的脾氣都很古怪"),
     frends: [
         frend(frend_id: 1, name: "獅子座", nick_name: "獅獅", picture: "leo", description: "森林之王"),
         frend(frend_id: 2, name: "雙魚座", nick_name: "魚魚", picture: "pisces", description: "我要有水才能活"),
         frend(frend_id: 3, name: "金牛座", nick_name: "牛牛", picture: "taurus", description: "很快就長大了"),
         frend(frend_id: 4, name: "摩羯座", nick_name: "饃饃", picture: "capricorn", description: "不知道要打什麼了"),
         frend(frend_id: 5, name: "射手座", nick_name: "射手", picture: "sagittarius", description: "射到就知道")
-    ], chats: [
+    ],
+    chats: [
         chat(chat_id: 1, name: "風象星座討論", picture: "", last_message: "是不是都很瘋?", last_message_time: "12/04")
     ])
 
@@ -104,20 +106,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             let data = homeLists.frends[indexPath.row]
             cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
             cell.nameLabel.text = data.name
+            cell.numLabel.text = String(data.frend_id)
             cell.statusLabel.text = data.description
-            cell.DateLabel.text = ""
+            cell.dateLabel.text = ""
         } else if indexPath.section == 2 {
             let data = homeLists.chats[indexPath.row]
             cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
             cell.nameLabel.text = data.name
+            cell.numLabel.text = String(data.chat_id)
             cell.statusLabel.text = data.last_message
-            cell.DateLabel.text = data.last_message_time
+            cell.dateLabel.text = data.last_message_time
         } else {
             let data = homeLists.myinfo
             cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
             cell.nameLabel.text = data.name
+            cell.numLabel.text = data.nick_name
             cell.statusLabel.text = data.description
-            cell.DateLabel.text = "自己"
+            cell.dateLabel.text = "自己"
         }
         
         return cell

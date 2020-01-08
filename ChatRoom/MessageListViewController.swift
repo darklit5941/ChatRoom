@@ -52,8 +52,9 @@ extension MessageListViewController: UITableViewDelegate, UITableViewDataSource{
         let data = chats[indexPath.row]
         cell.avatarUIImageView.image = UIImage(named: data.picture)
         cell.nameLabel.text = data.name
+        cell.numLabel.text = String(data.chat_id)
         cell.statusLabel.text = data.last_message
-        cell.DateLabel.text = data.last_message_time
+        cell.dateLabel.text = data.last_message_time
         return cell
     }
     
