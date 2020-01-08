@@ -16,13 +16,23 @@ struct frend {
     let description: String
 }
 
+struct me {
+    let id: Int
+    let name: String
+    let nick_name: String
+    let picture: String
+    let description: String
+}
+
 struct homeList {
+    let myinfo: me
     let frends: [frend]
     let chats: [chat]
 }
 
 var homeLists =
-    homeList(frends: [
+    homeList(myinfo: me(id: 1, name: "水瓶座", nick_name: "水水", picture: "aquarius", description: "水瓶的脾氣都很古怪"),
+    frends: [
         frend(frend_id: 1, name: "獅子座", nick_name: "獅獅", picture: "leo", description: "森林之王"),
         frend(frend_id: 2, name: "雙魚座", nick_name: "魚魚", picture: "pisces", description: "我要有水才能活"),
         frend(frend_id: 3, name: "金牛座", nick_name: "牛牛", picture: "taurus", description: "很快就長大了"),
@@ -61,24 +71,26 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     //每個section裡的row個數
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section == 1 {
             return homeLists.frends.count
-        }else{
+        }else if section == 2 {
             return homeLists.chats.count
+        }else{
+            return 1
         }
     }
     
     //有幾個section
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     //section內容
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0:
-            return "好友"
         case 1:
+            return "好友"
+        case 2:
             return "群組"
         default:
             return nil
@@ -88,18 +100,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     //row內容
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessageListTableViewCell
-        if indexPath.section == 0 {
+        if indexPath.section == 1 {
             let data = homeLists.frends[indexPath.row]
             cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
             cell.nameLabel.text = data.name
             cell.statusLabel.text = data.description
             cell.DateLabel.text = ""
-        }else{
+        } else if indexPath.section == 2 {
             let data = homeLists.chats[indexPath.row]
             cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
             cell.nameLabel.text = data.name
             cell.statusLabel.text = data.last_message
             cell.DateLabel.text = data.last_message_time
+        } else {
+            let data = homeLists.myinfo
+            cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
+            cell.nameLabel.text = data.name
+            cell.statusLabel.text = data.description
+            cell.DateLabel.text = "自己"
         }
         
         return cell
