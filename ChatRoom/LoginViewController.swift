@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var accountUITextField: UITextField!
+    @IBOutlet weak var passwordUITextField: UITextField!
+    @IBOutlet weak var LoginUIButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,9 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func LoginUIButtonClick(_ sender: Any) {
+        print("gogohell")
+    }
     /*
     // MARK: - Navigation
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 struct frend {
     let frend_id: Int
@@ -118,7 +119,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             cell.dateLabel.text = data.last_message_time
         } else {
             let data = homeLists.myinfo
-            cell.avatarUIImageView.image = UIImage(named: self.checkImage(pictureName: data.picture))
+            let url = URL(string: "https://hbimg.huabanimg.com/c1ff5a4f99383bc50af8d03cd47db21971e5930d3d323-8JyAmf_fw658")
+            cell.avatarUIImageView.kf.setImage(with: url)
             cell.nameLabel.text = data.name
             cell.numLabel.text = data.nick_name
             cell.statusLabel.text = data.description
