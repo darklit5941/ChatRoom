@@ -24,3 +24,8 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+#CocoaPods
+Pods
+!Podfile
+!Podfile.lock
